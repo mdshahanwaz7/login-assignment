@@ -40,7 +40,7 @@ export const Signup = () => {
             return;
         }
        const API_URL = import.meta.env.VITE_API_URL;
-       console.log("API_URL:", import.meta.env.VITE_API_URI);
+       console.log("API_URL:", import.meta.env.VITE_API_URL);
 
         try {
             const res = await fetch(`${API_URL}/api/user/signup`, {
