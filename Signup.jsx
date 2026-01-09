@@ -39,7 +39,9 @@ export const Signup = () => {
             alert("Password must be at least 4 digits and numbers only");
             return;
         }
-       const API_URL = import.meta.env.VITE_API_URI;
+       const API_URL = import.meta.env.VITE_API_URL;
+       console.log("API_URL:", import.meta.env.VITE_API_URI);
+
         try {
             const res = await fetch(`${API_URL}/api/user/signup`, {
                 method: "POST",
