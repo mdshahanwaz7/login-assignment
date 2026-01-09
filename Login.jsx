@@ -5,16 +5,16 @@ import { FaUser, FaLock, FaEye, FaEyeSlash } from "react-icons/fa";
 
 export const Login = () => {
   const [show, setshow] = useState(false)
-  const [form, setform] = useState({ name: "", email: "", password: "", })
+  const [form, setform] = useState({ email: "", password: "", })
   const navigate = useNavigate()
   const handlelogic = async (e) => {
 
 
     e.preventDefault();
-    // alert("FORM SUBMITTED"); // 🔥 test
+    // alert("FORM SUBMITTED"); //
 
      const API_URL = import.meta.env.VITE_API_URL;
-
+       console.log(API_URL)
     try {
       const res = await fetch(`${API_URL}/api/user/login`, {
         method: "POST",
