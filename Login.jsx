@@ -13,10 +13,10 @@ export const Login = () => {
     e.preventDefault();
     // alert("FORM SUBMITTED"); // 🔥 test
 
-
+     const API_URL = import.meta.env.VITE_API_URL;
 
     try {
-      const res = await fetch("http://localhost:1000/api/user/login", {
+      const res = await fetch(`${API_URL}/api/user/login`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
