@@ -13,7 +13,7 @@ export const Login = () => {
     e.preventDefault();
     // alert("FORM SUBMITTED"); // 🔥 test
 
-     const API_URL = import.meta.env.VITE_API_URL;
+     const API_URL = import.meta.env.VITE_API_URI;
 
     try {
       const res = await fetch(`${API_URL}/api/user/login`, {
